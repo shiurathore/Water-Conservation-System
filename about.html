@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Future</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">Blue Future</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="guideline.html">Guideline</a></li>
+      <li><a href="tracker.html">Tracker</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>About Us</h1>
+    <div>
+    <a href="index.html">Home</a> 
+    <span> &raquo;</span> 
+    <span>About</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          Welcome to <b>Blue Future</b> – a movement dedicated to creating awareness and inspiring action for water conservation in our homes, schools, farms, and industries.
+        </p>
+        <p>
+          Water is the essence of life. From the glass we drink to the crops that feed us, from powering industries to nurturing ecosystems, everything depends on it. Yet, our planet is facing a water crisis — rivers are shrinking, groundwater is depleting, and millions struggle daily for clean drinking water. This is not only an environmental issue but a survival challenge for humanity.
+        </p>
+
+        <h3>Our Mission</h3>
+        <p>
+          At Blue Future, our mission is simple: to educate, inspire, and empower people everywhere to use water wisely. By spreading awareness and offering practical solutions, we aim to build a culture of responsibility where every drop is valued and protected for generations to come.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <img src="https://www.terrafic.org/wp-content/uploads/2022/04/ensure-abundance-cnserve-water-1024X682-px.jpg" alt="Save Water Save Earth">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What We Offer Section -->
+<section class="offer-section">
+  <div class="container">
+    <h2>What We Offer</h2>
+    <p class="subtitle">Through our platform, you'll find:</p>
+    <div class="offer-card">
+      <ul>
+        <li>💧 <b>Inspiring Campaigns:</b> Messages like “Save Water, Save Life” and “Every Drop Counts”.</li>
+        <li>💧 <b>Tips & Guides:</b> Effective methods to save water in households, agriculture, and industries.</li>
+        <li>💧 <b>Daily Tracker Tool:</b> Log water usage and reflect on habits.</li>
+        <li>💧 <b>Awareness Media:</b> Engaging images and videos on conservation.</li>
+        <li>💧 <b>Project Gallery:</b> Real-world conservation efforts that inspire change.</li>
+        <li>💧 <b>Community Voice:</b> Suggestion box for sharing new ideas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="abt-con">
+  <div class="abt-overlay">
+    <h3>Why It Matters</h3>
+    <p>
+      If current patterns of misuse continue, the world could face severe water shortages in the near future. But change is possible. By fixing leaks, reusing water, adopting efficient farming methods, and promoting mindful industrial practices, we can save thousands of liters every day.
+    </p>
+
+    <h3>Our Belief</h3>
+    <p>
+      We believe that small actions create big futures. A single household saving just a few liters a day may seem minor, but multiplied across millions of people, the impact is enormous. Conservation isn’t about sacrifice — it’s about respect for life and ensuring a sustainable tomorrow.
+    </p>
+  </div>
+</div>
+
+<!-- Join Us Section -->
+<section class="join-us">
+  <div class="join-container">
+    <h3>Join Us</h3>
+    <p>
+      Blue Future is more than just a website — it’s a call to action. Explore our tips, use the tracker, share your suggestions, and become a part of this movement. Together, we can protect this vital resource for generations to come.
+    </p>
+    <p class="highlight">💙 Blue Future – saving water today, securing life tomorrow.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>Blue Future</h2>
+      <p>Pure & Healthy Drinking Water For Everyone.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="guideline.html">Guideline</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: bluefuture@gmail.com</p>
+      <p>Phone: +91 123456XXXX</p>
+      <p>Address: Ajmer, Rajasthan</p>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-whatsapp"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Blue Future. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

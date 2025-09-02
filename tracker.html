@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Future</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">Blue Future</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="guideline.html">Guideline</a></li>
+      <li><a href="tracker.html">Tracker</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Tracker</h1>
+    <div>
+    <a href="index.html">Home</a> 
+    <span> &raquo;</span> 
+    <span>Tracker</span>
+    </div>
+  </section>
+
+  <!-- Tracker -->
+  <section class="tracker">
+    <div class="headtoall">
+       <h2>Daily Water Usage Tracker</h2>
+       <p class="subtitle">Log your water usage by activity. Data is saved locally in your browser (dummy). </p>
+    </div>
+
+    <div class="tracker-grid">
+      <!-- Form Card -->
+      <div class="card tracker-form">
+        <div class="goal-wrap">
+          <div>
+            <label for="dailyGoal">Daily Goal (Liters)</label>
+            <input type="number" id="dailyGoal" min="1" step="1" value="100"/>
+            <div class="goal-label">Set your target usage (e.g., 100 L/day).</div>
+          </div>
+          <button id="saveGoalBtn" class="btn ghost" type="button">Save Goal</button>
+        </div>
+
+        <div>
+          <label>Today's Progress</label>
+          <div class="progress"><span id="progressFill"></span></div>
+          <div class="goal-label"><span id="progressText">0 / 100 L</span></div>
+        </div>
+
+        <hr style="border: none; height: 1px; background: #eee; margin: 18px 0;">
+
+        <form id="usageForm">
+          <div class="row">
+            <div>
+              <label for="date">Date</label>
+              <input type="date" id="date" required/>
+            </div>
+            <div>
+              <label for="activity">Activity</label>
+              <select id="activity" required>
+                <option value="" disabled selected>Select activity</option>
+                <option>Drinking</option>
+                <option>Cooking</option>
+                <option>Bathing</option>
+                <option>Laundry</option>
+                <option>Cleaning</option>
+                <option>Gardening</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="amount">Amount (Liters)</label>
+              <input type="number" id="amount" min="0.1" step="0.1" placeholder="e.g., 2.5" required/>
+            </div>
+            <div>
+              <label for="notes">Notes (optional)</label>
+              <input type="text" id="notes" placeholder="Quick note"/>
+            </div>
+          </div>
+
+          <div class="tracker-actions">
+            <button class="btn primary" type="submit">Add Entry</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+        </form>
+
+        <div class="summary">
+          <div class="mini">
+            <h4>Today's Total</h4>
+            <p id="todayTotal">0 L</p>
+          </div>
+          <div class="mini">
+            <h4>This Week</h4>
+            <p id="weekTotal">0 L</p>
+          </div>
+          <div class="mini">
+            <h4>Avg / Day</h4>
+            <p id="avgPerDay">0 L</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table Card -->
+      <div class="card">
+        <div class="tools">
+          <input type="date" id="filterDate"/>
+          <select id="filterActivity">
+            <option value="">All activities</option>
+            <option>Drinking</option>
+            <option>Cooking</option>
+            <option>Bathing</option>
+            <option>Laundry</option>
+            <option>Cleaning</option>
+            <option>Gardening</option>
+            <option>Other</option>
+          </select>
+          <button id="exportCsv" class="btn ghost" type="button">Export CSV</button>
+          <button id="clearAll" class="btn danger" type="button">Clear All</button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Date</th>
+              <th>Activity</th>
+              <th>Amount (L)</th>
+              <th>Notes</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody" style="color: black;">
+            <!-- rows injected here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>Blue Future</h2>
+      <p>Pure & Healthy Drinking Water For Everyone.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="guideline.html">Guideline</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: bluefuture@gmail.com</p>
+      <p>Phone: +91 123456XXXX</p>
+      <p>Address: Ajmer, Rajasthan</p>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-whatsapp"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Blue Future. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+
+
+    // Tracker Logic
+    const usageForm = document.getElementById("usageForm");
+    const tableBody = document.getElementById("tableBody");
+    const todayTotalEl = document.getElementById("todayTotal");
+    const weekTotalEl = document.getElementById("weekTotal");
+    const avgPerDayEl = document.getElementById("avgPerDay");
+    const progressFill = document.getElementById("progressFill");
+    const progressText = document.getElementById("progressText");
+    const dailyGoalInput = document.getElementById("dailyGoal");
+    const saveGoalBtn = document.getElementById("saveGoalBtn");
+
+    let entries = JSON.parse(localStorage.getItem("entries")) || [];
+    let dailyGoal = parseInt(localStorage.getItem("dailyGoal")) || 100;
+
+    // Save Goal
+    saveGoalBtn.addEventListener("click", () => {
+      dailyGoal = parseInt(dailyGoalInput.value) || 100;
+      localStorage.setItem("dailyGoal", dailyGoal);
+      updateSummary();
+    });
+
+    // Add Entry
+    usageForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const date = document.getElementById("date").value;
+      const activity = document.getElementById("activity").value;
+      const amount = parseFloat(document.getElementById("amount").value);
+      const notes = document.getElementById("notes").value;
+
+      if (!date || !activity || isNaN(amount)) return;
+
+      entries.push({ date, activity, amount, notes });
+      localStorage.setItem("entries", JSON.stringify(entries));
+
+      usageForm.reset();
+      renderTable();
+      updateSummary();
+    });
+
+    // Delete Entry
+    function deleteEntry(index) {
+      entries.splice(index, 1);
+      localStorage.setItem("entries", JSON.stringify(entries));
+      renderTable();
+      updateSummary();
+    }
+
+    // Render Table
+    function renderTable() {
+      tableBody.innerHTML = "";
+      entries.forEach((entry, index) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${entry.date}</td>
+          <td>${entry.activity}</td>
+          <td>${entry.amount} L</td>
+          <td>${entry.notes || ""}</td>
+          <td><button onclick="deleteEntry(${index})">❌</button></td>
+        `;
+        tableBody.appendChild(tr);
+      });
+    }
+
+    // Update Summary
+    function updateSummary() {
+      const today = new Date().toISOString().split("T")[0];
+      const weekStart = new Date();
+      weekStart.setDate(weekStart.getDate() - 6);
+
+      let todayTotal = 0;
+      let weekTotal = 0;
+
+      entries.forEach(e => {
+        if (e.date === today) todayTotal += e.amount;
+        if (new Date(e.date) >= weekStart) weekTotal += e.amount;
+      });
+
+      const avgPerDay = entries.length > 0 ? 
+        (entries.reduce((sum, e) => sum + e.amount, 0) / new Set(entries.map(e => e.date)).size).toFixed(1) : 0;
+
+      todayTotalEl.textContent = todayTotal + " L";
+      weekTotalEl.textContent = weekTotal + " L";
+      avgPerDayEl.textContent = avgPerDay + " L";
+
+      // Progress Bar
+      let percent = Math.min((todayTotal / dailyGoal) * 100, 100);
+      progressFill.style.width = percent + "%";
+      progressText.textContent = todayTotal + " / " + dailyGoal + " L";
+    }
+
+    // CSV Export
+    document.getElementById("exportCsv").addEventListener("click", () => {
+      let csv = "Date,Activity,Amount,Notes\n";
+      entries.forEach(e => {
+        csv += `${e.date},${e.activity},${e.amount},${e.notes || ""}\n`;
+      });
+      const blob = new Blob([csv], { type: "text/csv" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "water_usage.csv";
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // Clear All
+    document.getElementById("clearAll").addEventListener("click", () => {
+      if (confirm("Clear all entries?")) {
+        entries = [];
+        localStorage.removeItem("entries");
+        renderTable();
+        updateSummary();
+      }
+    });
+
+    // Initial load
+    renderTable();
+    updateSummary();
+
+    // Expose delete function
+    window.deleteEntry = deleteEntry;
+  </script>
+</body>
+</html>
